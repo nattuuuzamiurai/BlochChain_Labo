@@ -18,7 +18,8 @@
     }
   },
   etherscan: {
-    apiKey: 'XQUATQI8T741U5P8CGC2QZ4VVR67BHX1WP'
+    //apiKeyを入れたままpushしないように
+    apiKey: '' 
   }
  };
  
