@@ -31,7 +31,8 @@ describe('Token contrat', () => {
     describe('Transactions', () => {
         it('should transfer tokens between accounts', async () => {
             await token.transfer(address1.address, 50);
-            expect(await token.balanceOf(address1.address)).to.equal(50);
+            const address1Balance = await token.balanceOf(address1.address);
+            expect(address1Balance).to.equal(50);
             
         });
 
