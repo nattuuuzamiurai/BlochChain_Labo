@@ -13,7 +13,7 @@ describe('Token contrat', () => {
 
     describe('Deployment', () => {
         it('name', async () => {
-            expect(await token.name()).to.equal('natou');
+            expect(await token.name()).to.equal('Block Chain Lab token');
         })
         it('should set the right owner', async () => {
             expect(await token.owner()).to.equal(owner.address);
@@ -23,17 +23,16 @@ describe('Token contrat', () => {
             const ownerBalance = await token.balanceOf(owner.address);
             expect(await token.totalSupply()).to.equal(ownerBalance);
         });
+        it('show owner balanc', async () => {
+            console.log(await token.balanceOf(owner.address));
+        })
     });
 
     describe('Transactions', () => {
         it('should transfer tokens between accounts', async () => {
             await token.transfer(address1.address, 50);
-            const address1Balance = await token.balanceOf(address1.address);
-            expect(address1.address).to.equal(50);
-
-            await token.connect(address1).transfer(address2.address, 50);
-            const address2Balance = await token.balanceOf(address2.address);
-            expect(address2.address).to.equal(50);
+            expect(await token.balanceOf(address1.address)).to.equal(50);
+            
         });
 
         it('should fail if sender doesnt have enought tokens', async () => {

@@ -10,6 +10,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract BlockChain is Ownable, ERC20('Block Chain Lab token','BCL') {  //constractでnameとsymbolを決定
     uint256 private _totalSupply = 1000;  //supplyをここで決定
 
+    constructor() {
+        _mint(msg.sender, _totalSupply);
+    }
+
     function mint(uint256 amount) public onlyOwner {
         _mint(msg.sender, amount);
     }
