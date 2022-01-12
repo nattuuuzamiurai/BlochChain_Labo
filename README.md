@@ -31,6 +31,6 @@ $mkdir secrets.json
 ```
 secrets.json内で
 {
-    "key": "your privateKey"
+    "key": "your privateKey",
     "Polygon_API_key": "your API_key"
 }
