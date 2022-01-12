@@ -25,13 +25,10 @@ $npx hardhat run scripts/deploy.js --network localhost
 
 - privateKeyとscanAPI管理
 
-    GovernanceTokenの階層で
+    GovernanceTokenの階層でFileを作成しkeyとapiを置く(pushしてもgitに反映されない)
 ```
 $mkdir secrets.json
-```
 
-    secrets.json内で
-```
 {
     "key": "your privateKey",
     "Polygon_API_key": "your API_key"
