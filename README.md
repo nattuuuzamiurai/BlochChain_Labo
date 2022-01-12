@@ -30,7 +30,9 @@ GovernanceTokenの階層で
 $mkdir secrets.json
 ```
 secrets.json内で
+```
 {
     "key": "your privateKey",
     "Polygon_API_key": "your API_key"
 }
+```
