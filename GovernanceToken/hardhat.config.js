@@ -6,8 +6,7 @@
 
  var secretsFile =  require("./secrets.json");
 
-  //privateKeyを入れたままpushしないように
-
+  
 
  module.exports = {
   solidity: "0.8.0",
@@ -18,7 +17,6 @@
     }
   },
   etherscan: {
-    //apiKeyを入れたままpushしないように
     apiKey:  secretsFile.Polygon_API_key
   }
  };
