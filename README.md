@@ -25,11 +25,11 @@ $npx hardhat run scripts/deploy.js --network localhost
 
 - privateKeyとscanAPI管理
 
-GovernanceTokenの階層で
+    GovernanceTokenの階層で
 ```
 $mkdir secrets.json
 ```
-secrets.json内で
+    secrets.json内で
 ```
 {
     "key": "your privateKey",
